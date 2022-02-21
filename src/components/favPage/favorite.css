@@ -23,6 +23,13 @@
     justify-content: space-between;
 }
 
+.noResult{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin: 3rem;
+    font-weight: bolder;
+}
+
 /* .div-card-img{
     height: 15rem;
 }

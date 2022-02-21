@@ -4,18 +4,20 @@ import { Route, Routes } from 'react-router-dom';
 
 import Home from './components/homePage/Home';
 import Fav from './components/favPage/FavPage';
-import  Navbar  from './components/navbar/Navbar';
+import Header from './components/header/Header';
+import Footer  from './components/footer/Footer';
 
 function App() {
   return (
     <div>
-       <Navbar/>
+       {/* <Navbar/> */}
       <Routes>
         {/* <Switch> */}
           <Route path='/' exact  element={<Home/>} />
           <Route path='/favorite' exact element={<Fav/>} />
         {/* </Switch> */}
       </Routes>
+      <Footer/>
     </div>
   );
 }

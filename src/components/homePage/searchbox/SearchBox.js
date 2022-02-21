@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react'; // first import useRef 
+import { useState, useRef } from 'react'; // first import useRef 
 import axios from 'axios';
 import { Button, Form } from 'react-bootstrap';
 import './searchbox.css';
@@ -6,9 +6,7 @@ import './searchbox.css';
 
 function SearchBox({setData}) {
   const [search, setSearch] = useState("");
-  // create element for the ref
   const inputRef = useRef(null);
-  // inputRef is an object and if you want to access it's element use .current 
   const handleFilter = async(event)=>{
      event.preventDefault();
      try{
@@ -21,10 +19,6 @@ function SearchBox({setData}) {
 
   }
 
-useEffect(()=>{
-  // console.log(inputRef.current);
-  inputRef.current.focus();
-},[])
  
 
   return (

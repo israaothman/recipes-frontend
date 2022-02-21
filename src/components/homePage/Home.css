@@ -4,6 +4,14 @@
     align-items: center;
     justify-content: center;
 }
+
+.searchH3, h3{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin: 3rem;
+    font-weight: bolder;
+}
+
 .errorMessage{
     display: flex;
     justify-content: center;

@@ -12,10 +12,11 @@ function UpdateModal( {show,handleClose,ele,getFavRecipes,
     setCommentInput
 }){    
 
+    const user_id=1;
     console.log(titleInput);
     const update = async(id)=>{
 
-        let updated = {title:titleInput, readyInMinutes:ele.readyInMinutes, summary:ele.summary, vegetarian:ele.vegetarian, instructions:ele.instructions, sourceUrl:ele.sourceUrl, image:imageInput, comment:commentInput}
+        let updated = {title:titleInput, readyInMinutes:ele.readyInMinutes, summary:ele.summary, vegetarian:ele.vegetarian, instructions:ele.instructions, sourceUrl:ele.sourceUrl, image:imageInput, comment:commentInput,user_id:user_id}
         
       await axios.put(`${process.env.REACT_APP_BASE_URL}/updateFavRecipe/${id}`,updated)
                   .then(()=>{
