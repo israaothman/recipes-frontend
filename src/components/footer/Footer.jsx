@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Footer.css"
 
-const Navbar2 = () => {
+const Footer = () => {
   return <>
     <footer>
       All right reserved Isra'a Othman&copy; 2022
@@ -9,4 +9,4 @@ const Navbar2 = () => {
   </>;
 };
 
-export default Navbar2;
+export default Footer;

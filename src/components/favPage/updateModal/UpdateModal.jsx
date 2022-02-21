@@ -1,31 +1,32 @@
 import Modal from 'react-bootstrap/Modal';
 import { Button } from 'react-bootstrap';
-import {useState} from 'react';
 import axios from 'axios';
 
-function UpdateModal( {show,handleClose,ele,getFavRecipes,
+const UpdateModal = ({ show, handleClose, ele, getFavRecipes, user,
     titleInput,
     setTitleInput,
     imageInput,
     setImageInput,
     commentInput,
-    setCommentInput
-}){    
+    setCommentInput,
+    readyInMinutes,
+    setReadyInMinutes,
+    instructions,
+    setInstructions
+}) => {
 
-    const user_id=1;
-    console.log(titleInput);
-    const update = async(id)=>{
+    const update = async (id) => {
 
-        let updated = {title:titleInput, readyInMinutes:ele.readyInMinutes, summary:ele.summary, vegetarian:ele.vegetarian, instructions:ele.instructions, sourceUrl:ele.sourceUrl, image:imageInput, comment:commentInput,user_id:user_id}
-        
-      await axios.put(`${process.env.REACT_APP_BASE_URL}/updateFavRecipe/${id}`,updated)
-                  .then(()=>{
-                    getFavRecipes();
-                  }).catch(err=>{
-                      console.log(err);
-                  })
+        let updated = { title: titleInput, readyInMinutes: ele.readyInMinutes, summary: ele.summary, vegetarian: ele.vegetarian, instructions: ele.instructions, sourceUrl: ele.sourceUrl, image: imageInput, comment: commentInput, user_id: user.user_id }
+
+        await axios.put(`${process.env.REACT_APP_BASE_URL}/updateFavRecipe/${id}`, updated)
+            .then(() => {
+                getFavRecipes();
+            }).catch(err => {
+                console.log(err);
+            })
     }
-     
+
 
     return (
         <>
@@ -37,20 +38,22 @@ function UpdateModal( {show,handleClose,ele,getFavRecipes,
                     <div>
                         <p>Edite Title</p>
                         <input value={titleInput} onChange={(e) => setTitleInput(e.target.value)} />
-                        <p style={{ "marginTop": "10px" }}>Edit Image</p>
+                        <p style={{ "marginTop": "10px" }}>Edit Image Link</p>
                         <textarea value={imageInput} onChange={(e) => setImageInput(e.target.value)} />
-                    </div>
-                    <div>
+                        <p>Edite Time To Prepare</p>
+                        <input value={readyInMinutes} onChange={(e) => setReadyInMinutes(e.target.value)} />
+                        <p>Edite Instructions</p>
+                        <input value={instructions} onChange={(e) => setInstructions(e.target.value)} />
                         <label htmlFor="op">Write Your Opinion</label>
                         <textarea value={commentInput} onChange={(e) => setCommentInput(e.target.value)} placeholder="Write Your Opinion" type="text" id="op" />
                     </div>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="primary"
-                     onClick={()=>{
-                        update(ele.id);
-                        handleClose();
-                     }}
+                        onClick={() => {
+                            update(ele.id);
+                            handleClose();
+                        }}
                     >
                         Update
                     </Button>
