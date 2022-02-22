@@ -39,7 +39,6 @@ const Fav = ({ user }) => {
     const deleteFromFav = async (id) => {
         await axios.delete(`${process.env.REACT_APP_BASE_URL}/deleteFavRecipe/${id}`)
             .then(() => {
-                console.log("deleted :(")
                 getFavRecipes();
             }).catch((err) => {
                 console.log(err);
@@ -57,8 +56,6 @@ const Fav = ({ user }) => {
                             {
                                 data.map((ele) => (
                                     <Col key={ele.id} md={4}>
-                                        {console.log(ele)}
-
                                         <Card className='div-card'>
                                             <Card.Img className='div-card-img' variant="top" src={ele.image} />
                                             <Card.Body>

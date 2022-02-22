@@ -13,7 +13,6 @@ const Modalo = ({ cardInfo, show, handleClose, user }) => {
 
         await axios.post(`${process.env.REACT_APP_BASE_URL}/addFavRecipe`, fav)
             .then(() => {
-                console.log("Done :) ");
             }).catch((err) => {
                 console.log(err);
             });

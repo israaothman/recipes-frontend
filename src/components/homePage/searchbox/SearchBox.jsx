@@ -12,8 +12,6 @@ function SearchBox({ setData }) {
     try {
       const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/searchRecipes?search=${search}`);
       setData(result.data);
-      console.log('search',result.data)
-
     } catch (err) {
       console.log(err);
     }
