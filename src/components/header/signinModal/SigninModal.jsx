@@ -37,25 +37,33 @@ const SigninModal = ({ user, show, handleClose }) => {
                 <Modal.Body className="body">
                     <div>
                         <p>User Name</p>
-                        <input onChange={(e) => user.setUserName(e.target.value)} required/>
+                        <input onChange={(e) => user.setUserName(e.target.value)} required />
 
                         <p>Password</p>
-                        <input type="password" onChange={(e) => user.setPassword(e.target.value)} required/>
+                        <input type="password" onChange={(e) => user.setPassword(e.target.value)} required />
                     </div>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="primary"
                         onClick={() => {
-                            handleSignin();
-                            handleClose();
+                            if (user.username && user.password) {
+                                handleSignin();
+                                handleClose();
+                            } else {
+                                alert("Please fill the username and the password felids ");
+                            }
                         }}
                     >
                         Sign in
                     </Button> OR
                     <Button variant="primary"
                         onClick={() => {
-                            handleSignup();
-                            handleClose();
+                            if (user.username && user.password) {
+                                handleSignup();
+                                handleClose();
+                            } else {
+                                alert("Please fill the username and the password felids ");
+                            }
                         }}
                     >
                         Sign up
