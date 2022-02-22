@@ -37,10 +37,10 @@ const SigninModal = ({ user, show, handleClose }) => {
                 <Modal.Body className="body">
                     <div>
                         <p>User Name</p>
-                        <input onChange={(e) => user.setUserName(e.target.value)} />
+                        <input onChange={(e) => user.setUserName(e.target.value)} required/>
 
                         <p>Password</p>
-                        <input type="password" onChange={(e) => user.setPassword(e.target.value)} />
+                        <input type="password" onChange={(e) => user.setPassword(e.target.value)} required/>
                     </div>
                 </Modal.Body>
                 <Modal.Footer>
