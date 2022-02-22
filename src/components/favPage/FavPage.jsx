@@ -71,7 +71,7 @@ const Fav = ({ user }) => {
                                                     <Card.Link className='div-card-link' href={ele.sourceUrl} target="_blank">read more</Card.Link>
                                                 </Card.Text>
                                                 <h6>
-                                                Your Notes : {ele.comment}
+                                                    Your Notes : {ele.comment}
                                                 </h6>
                                                 <div>
                                                     <Button className='div-card-button' variant="primary"

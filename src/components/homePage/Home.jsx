@@ -40,11 +40,11 @@ const Home = ({ user }) => {
                 <h2>Scroll down to explore our recipes ...</h2>
             </section>
 
-            <div className="searchH3">
+            {/* <div className="searchH3">
                 <h3>Searching for a specific recipe ? </h3>
                 <SearchBox setData={setData} />
 
-            </div>
+            </div> */}
             <h3>All Recipes :  </h3>
             <Container className='div-container'>
                 <Row md={3}>
