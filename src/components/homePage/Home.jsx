@@ -52,7 +52,7 @@ const Home = ({ user }) => {
                         data.length !== 0 && data.map((ele) => (
                             <Col key={ele.id} md={4} >
                                 <Card className='div-card'>
-                                    <Card.Img className='div-card-img' variant="top" src={ele.image} />
+                                    <Card.Img className='div-card-img' variant="top" src={ele.image} alt={ele.title} />
                                     <Card.Body>
                                         <Card.Title className='div-card-title'>{ele.title}</Card.Title>
                                         <Card.Text>

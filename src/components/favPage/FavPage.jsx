@@ -70,9 +70,9 @@ const Fav = ({ user }) => {
                                                     {ele.summary.split('.')[0].replace(regex, '')}. &nbsp;
                                                     <Card.Link className='div-card-link' href={ele.sourceUrl} target="_blank">read more</Card.Link>
                                                 </Card.Text>
-                                                <Card.Text className='card-text'>
-                                                    {ele.comment}
-                                                </Card.Text>
+                                                <h6>
+                                                Your Notes : {ele.comment}
+                                                </h6>
                                                 <div>
                                                     <Button className='div-card-button' variant="primary"
                                                         onClick={() => {
@@ -100,7 +100,7 @@ const Fav = ({ user }) => {
                     </Container>
                 }
                 {
-                    !data.length && <div className='noResult'>
+                    !data.length && <div className='noResult vHieght'>
 
                         <h2>You don't have any Recipes :( </h2>
                         <Button>  <Link className='link' to="/">Go To Home Page</Link> </Button>

@@ -29,6 +29,19 @@
     margin: 3rem;
     font-weight: bolder;
 }
+.vHieght{
+    height: 66vh;
+
+}
 .fav-div{
     margin-top: 8em;
 }
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+button a:hover{
+    color: #ffffff;
+  }

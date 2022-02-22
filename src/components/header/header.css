@@ -37,7 +37,12 @@ header a {
     /* border-radius: 5px; */
     color: #fff;
     text-transform: uppercase;
+    
 }
+header a:hover{
+  color: #BB2D3B;
+}
+
 header .header-nav link {
     text-decoration: none;
     /* border: 1px solid #000; */

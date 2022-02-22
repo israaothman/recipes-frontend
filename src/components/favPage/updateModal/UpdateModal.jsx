@@ -36,15 +36,15 @@ const UpdateModal = ({ show, handleClose, ele, getFavRecipes, user,
                 </Modal.Header>
                 <Modal.Body className="body">
                     <div>
-                        <p>Edite Title</p>
+                        <p>Edit Title</p>
                         <input value={titleInput} onChange={(e) => setTitleInput(e.target.value)} />
                         <p style={{ "marginTop": "10px" }}>Edit Image Link</p>
                         <textarea value={imageInput} onChange={(e) => setImageInput(e.target.value)} />
-                        <p>Edite Time To Prepare</p>
+                        <p>Edit Time To Prepare</p>
                         <input value={readyInMinutes} onChange={(e) => setReadyInMinutes(e.target.value)} />
-                        <p>Edite Instructions</p>
+                        <p>Edit Instructions</p>
                         <input value={instructions} onChange={(e) => setInstructions(e.target.value)} />
-                        <label htmlFor="op">Write Your Opinion</label>
+                        <label htmlFor="op">Edit Your Notes</label>
                         <textarea value={commentInput} onChange={(e) => setCommentInput(e.target.value)} placeholder="Write Your Opinion" type="text" id="op" />
                     </div>
                 </Modal.Body>

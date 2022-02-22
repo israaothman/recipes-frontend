@@ -43,3 +43,8 @@
     margin: 10px 0;
     height: 3rem;
 }
+
+.card p{
+    height: 75px;
+    scroll-behavior: auto;
+}
