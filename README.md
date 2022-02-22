@@ -1,6 +1,6 @@
 # Recipe App 
 
-## Auther  
+## Author  
 #### Isra'a Othman 
  
  
